@@ -16,7 +16,6 @@ const Checkboxlist = (props) => {
       <>
         <Checkbox.Group
           options={checkboxList}
-          defaultValue={["Apple"]}
           onChange={checkboxHandler}
         />
         <br />

@@ -12,7 +12,7 @@ function App() {
 
     useEffect(() => {
       axios
-        .get(`http://localhost:3001/api/companies`)
+        .get(`http://localhost:3001/api/companies/`)
         .then((res) => {
           setCompanyList(res.data);
         })
@@ -21,7 +21,14 @@ function App() {
         });
     }, []);
 
-    const specialitiesList = ["Excavation", "Plumbing", "Electrical"];
+    const specialitiesList = [
+      "Excavation",
+      "Plumbing",
+      "Electrical",
+      "Tiling",
+      "Painting",
+      "Landscaping"      
+    ];
 
 
   return (

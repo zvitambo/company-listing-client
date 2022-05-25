@@ -6,7 +6,7 @@ export const Search = (props) => {
     const { searchHandler } = props;
     return (
       <div>
-        <Input placeholder='Search...' onChange={event => searchHandler(event.target.value)}/>
+        <Input placeholder='Search...' onChange={event => searchHandler(event.target.value)} id="search_input"/>
       </div>
     );
 }

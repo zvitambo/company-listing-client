@@ -10,17 +10,14 @@ const Companies = () => {
   const appContext = useContext(AppContext);
   const [companyList, setCompanyList] = useState([]);
   let filteredList = [];
+  
   useEffect(() => {
     setCompanyList(appContext.companies);
   }, [appContext.companies]);
 
-  // useEffect(() => {
-  //   filteredList = [...appContext.companies];
-  // }, [appContext.companies]);
+
 
   const searchHandler = (searchText) => {
-    //let filteredList = [...appContext.companies];
-    //console.log(filteredList);
     if (filteredList.length === 0) filteredList = [...appContext.companies];
     if (searchText.trim().length !== 0) {
       filteredList = filteredList.filter((company) => {
@@ -32,8 +29,6 @@ const Companies = () => {
 
   const checkboxHandler = (checkedValues) => {
     const checkedValuesStr = checkedValues.join(", ");
-    // let filteredList = [...appContext.companies];
-
     if (filteredList.length === 0) filteredList = [...appContext.companies];
     if (checkedValuesStr.trim().length !== 0) {
       filteredList = filteredList.filter((company) => {
